@@ -11,7 +11,7 @@ import modal
 
 app = modal.App()
 image = (
-    modal.Image.debian_slim()
+    modal.Image.debian_slim(python_version="3.13")
     .uv_pip_install("torch==2.13.0", "numpy")
     .env({"TORCHINDUCTOR_COMPILE_THREADS": "1"})
 )
